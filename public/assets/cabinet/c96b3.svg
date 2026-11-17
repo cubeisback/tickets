@@ -1,0 +1,25 @@
+<svg
+  preserveAspectRatio="none"
+  overflow="visible"
+  style="display: block"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="Icon_Button" clip-path="url(#clip0_0_1277)">
+    <path
+      id="Vector"
+      d="M10.5 2.5C8.567 2.5 7 4.067 7 6C7 7.933 8.567 9.5 10.5 9.5C12.433 9.5 14 7.933 14 6C14 4.067 12.433 2.5 10.5 2.5ZM5 6C5 2.96243 7.46243 0.5 10.5 0.5C13.5376 0.5 16 2.96243 16 6C16 8.34763 14.5291 10.3517 12.4587 11.141C13.5069 11.3031 14.5009 11.6011 15.4126 12.0141L14.5874 13.8359C13.4175 13.3059 12.063 13 10.6125 13C5.9411 13 2.5 16.0835 2.5 19.5H0.5C0.5 15.2455 4.1045 11.9348 8.6141 11.1682C6.50542 10.3985 5 8.37504 5 6ZM17.75 19.75V24H19.75V19.75H24V17.75H19.75V13.5H17.75V17.75H13.5V19.75H17.75Z"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      fill="#1A1D2B"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1277">
+      <rect width="24" height="24" fill="white" />
+    </clipPath>
+  </defs>
+</svg>

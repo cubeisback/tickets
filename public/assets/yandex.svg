@@ -1,0 +1,28 @@
+<svg
+  preserveAspectRatio="none"
+  overflow="visible"
+  style="display: block"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="Icon_Button" clip-path="url(#clip0_0_280)">
+    <path
+      id="Vector"
+      d="M10 0C15.5223 0 20 4.47769 20 10C20 15.5223 15.5223 20 10 20C4.47769 20 0 15.5223 0 10C0 4.47769 4.47769 0 10 0Z"
+      fill="#FC3F1D"
+    />
+    <path
+      id="Vector_2"
+      d="M11.3691 15.8333H13.3333V3.33334H10.4756C7.60218 3.33045 6.09124 4.96729 6.09124 7.37779C6.09124 9.30331 6.91965 10.435 8.39672 11.6041L5.83333 15.8304H7.95907L10.8142 11.0989L9.8243 10.3628C8.62336 9.46497 8.03983 8.76347 8.03983 7.25077C8.03983 5.91994 8.88387 5.01925 10.4912 5.01925H11.3665L11.3691 15.8333Z"
+      fill="white"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_0_280">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
+</svg>

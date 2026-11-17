@@ -1,0 +1,753 @@
+@reference "../globals.css";
+
+@layer components {
+  .cabinet-section {
+    @apply flex w-full min-w-0 max-w-[1200px] flex-col gap-5;
+  }
+  .page-heading {
+    @apply flex w-full min-w-0 flex-col gap-3;
+  }
+  .page-heading__title {
+    @apply text-[22px] font-bold leading-[1.2];
+  }
+  .page-heading__description,
+  .page-heading__back,
+  .panel__description {
+    @apply text-[13px] leading-[1.16] text-secondary;
+  }
+  .page-heading__back {
+    @apply self-start;
+    transition: color 180ms ease;
+  }
+  .page-heading__back:hover {
+    @apply text-ink;
+  }
+  .panel {
+    @apply flex min-w-0 flex-col items-start gap-5 rounded-2xl border border-[#e5e7ec] bg-white p-[15px];
+  }
+  .panel__title {
+    @apply text-[22px] font-bold leading-[1.2];
+  }
+  .panel__subtitle {
+    @apply text-base font-bold leading-[1.28];
+  }
+  .panel__description,
+  .buyer-card dd {
+    overflow-wrap: anywhere;
+  }
+  .cabinet-button {
+    @apply min-h-12 w-auto shrink-0 gap-2 px-6 py-[14px] text-sm leading-[1.16];
+  }
+  .button-row {
+    @apply flex flex-wrap items-center gap-3;
+  }
+  .accent-link {
+    @apply text-sm font-bold leading-[1.16] text-[#269cff] underline underline-offset-2;
+    transition: color 180ms ease;
+  }
+  .accent-link:hover {
+    @apply text-[#1559c7];
+  }
+  .section-label {
+    @apply text-sm font-bold leading-[1.16] text-secondary;
+  }
+  .section-rule {
+    @apply m-0 h-px w-full border-0;
+    background: url("/assets/cabinet/c1229.svg") repeat-x left center;
+  }
+  .visually-hidden {
+    @apply sr-only;
+  }
+  .field-grid {
+    @apply grid w-full min-w-0 grid-cols-1 gap-4;
+  }
+  .select-field {
+    @apply flex w-full min-w-0 flex-col gap-[6px];
+  }
+  .select-field__label {
+    @apply text-sm leading-[1.16] text-secondary;
+  }
+  .select-field__input {
+    @apply h-12 w-full min-w-0 appearance-none rounded-xl border border-border bg-white py-3 pl-4 pr-10 text-sm leading-[1.16] text-ink;
+    background-image: url("/assets/cabinet/5bb12.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px 18px;
+    transition: border-color 180ms ease;
+  }
+  .select-field__input:focus {
+    border-color: #269cff;
+  }
+  .status-badge {
+    @apply inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full px-3 py-[6px] text-xs font-semibold leading-normal;
+  }
+  .status-badge--paid {
+    @apply bg-[#dcfce7] text-[#15803d];
+  }
+  .status-badge--pending {
+    @apply bg-[#fef3c7] text-[#b45309];
+  }
+  .status-badge--refunded {
+    @apply bg-[#fee2e2] text-[#ef4444];
+  }
+  .status-badge--completed {
+    @apply rounded-xl border border-border bg-surface px-6 py-3 text-secondary;
+  }
+
+  .tariff-list {
+    @apply flex w-full flex-col gap-4;
+  }
+  .tariff-card {
+    @apply flex w-full min-w-0 flex-col gap-6 rounded-2xl border border-[#e5e7ec] bg-white p-[15px];
+  }
+  .tariff-card__details {
+    @apply flex min-w-0 flex-1 flex-col items-start gap-3;
+  }
+  .tariff-card__tag {
+    @apply rounded-full bg-[#dbeafe] px-3 py-[6px] text-xs leading-[1.2] text-[#155dfb];
+  }
+  .tariff-card__title {
+    @apply text-[22px] font-bold leading-[1.2];
+  }
+  .tariff-card__description {
+    @apply text-[13px] leading-[1.16] text-secondary;
+  }
+  .tariff-card__points {
+    @apply grid w-full grid-cols-1 gap-1 pt-2;
+  }
+  .tariff-card__points li {
+    @apply flex min-w-0 items-start gap-1 text-[13px] leading-[1.16] text-secondary;
+  }
+  .tariff-card__points img {
+    @apply size-4 shrink-0;
+  }
+  .tariff-card__available {
+    @apply text-xs leading-[1.2] text-[#269cff];
+  }
+  .tariff-card__action {
+    @apply flex w-full flex-col items-start gap-2;
+  }
+  .tariff-card__action strong {
+    @apply text-lg font-bold leading-[1.36];
+  }
+  .tariff-card__next-price {
+    @apply text-[13px] leading-[1.16] text-[#b45309];
+  }
+
+  .orders-filter {
+    @apply max-w-[360px];
+  }
+  .orders-list {
+    @apply w-full gap-0;
+  }
+  .order-row {
+    @apply flex w-full min-w-0 flex-col items-start gap-4 px-2 py-6;
+    transition: background-color 180ms ease;
+  }
+  .order-row + .order-row {
+    background-image: url("/assets/cabinet/e5900.svg");
+    background-repeat: repeat-x;
+    background-position: left top;
+  }
+  .order-row:hover {
+    background-color: #fafafc;
+  }
+  .order-row__info {
+    @apply flex min-w-0 flex-1 flex-col gap-2;
+  }
+  .order-row__title {
+    @apply text-sm font-bold leading-[1.28];
+  }
+  .order-row__description {
+    @apply text-xs leading-[1.2] text-secondary;
+  }
+  .order-row__meta {
+    @apply flex w-full flex-wrap items-center gap-3;
+  }
+  .order-row__meta strong {
+    @apply ml-auto whitespace-nowrap text-base font-bold leading-[1.28];
+  }
+
+  .my-events {
+    @apply flex w-full flex-col gap-4;
+  }
+  .my-event {
+    @apply items-start;
+  }
+  .my-event__details {
+    @apply flex w-full min-w-0 flex-1 flex-col gap-3;
+  }
+  .my-event__summary {
+    @apply flex flex-wrap items-center gap-3 text-[13px] leading-[1.2];
+  }
+  .my-event__participants {
+    @apply flex w-full flex-col gap-4;
+  }
+  .my-event__participants .ticket-row + .ticket-row {
+    @apply pt-3;
+    background: url("/assets/cabinet/85f89.svg") repeat-x left top;
+  }
+  .my-event .section-label {
+    @apply mt-4;
+  }
+  .ticket-row {
+    @apply flex w-full min-w-0 flex-wrap items-center gap-3;
+  }
+  .ticket-row__details {
+    @apply min-w-0 flex-1 basis-full text-[13px] leading-[1.2];
+    overflow-wrap: anywhere;
+  }
+  .ticket-row__details p {
+    @apply mt-1 text-xs text-secondary;
+  }
+  .ticket-row > strong {
+    @apply whitespace-nowrap text-lg font-bold leading-[1.36];
+  }
+  .ticket-row .cabinet-button {
+    @apply min-h-10 rounded-xl px-3 py-[10px] text-xs;
+  }
+  .my-event--past {
+    @apply items-start;
+  }
+  .event-card__image--past {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .order-detail__grid {
+    @apply grid w-full grid-cols-1 items-start gap-6;
+  }
+  .order-summary {
+    @apply gap-6 shadow-[0_4px_24px_#0000000f];
+  }
+  .order-summary__heading {
+    @apply flex w-full flex-col items-start justify-between gap-3;
+  }
+  .order-summary__heading .panel__title {
+    @apply w-full min-w-0;
+  }
+  .order-summary .section-rule {
+    background-image: url("/assets/cabinet/ab986.svg");
+  }
+  .order-summary__amount {
+    @apply text-[32px] font-bold leading-[1.12];
+  }
+  .summary-lines {
+    @apply flex w-full min-w-0 flex-col gap-3 text-sm leading-[1.16];
+  }
+  .summary-lines > div {
+    @apply flex w-full min-w-0 items-start justify-between gap-4;
+  }
+  .summary-lines dt {
+    @apply text-secondary;
+  }
+  .summary-lines dd {
+    @apply text-right font-bold;
+  }
+  .summary-lines__total {
+    @apply pt-4;
+    background: url("/assets/cabinet/00301.svg") repeat-x left top;
+  }
+  .summary-lines__total dd {
+    @apply text-lg;
+  }
+  .buyer-card {
+    @apply w-full;
+  }
+  .buyer-card__details {
+    @apply flex w-full flex-col gap-4 text-sm leading-[1.16];
+  }
+  .buyer-card__details dt {
+    @apply mb-1 text-xs text-secondary;
+  }
+  .buyer-card__details dd {
+    @apply font-bold;
+  }
+  .order-participants {
+    @apply flex w-full flex-col gap-4;
+  }
+  .participant-ticket {
+    @apply w-full;
+  }
+  .participant-ticket__heading {
+    @apply flex w-full flex-wrap items-center justify-between gap-3;
+  }
+  .participant-ticket__heading > span {
+    @apply text-xs leading-[1.2] text-[#269cff];
+  }
+  .participant-ticket__details {
+    @apply min-w-0 flex-1 basis-full text-sm leading-[1.6];
+  }
+  .participant-ticket__details > div {
+    @apply flex flex-wrap gap-1;
+  }
+  .participant-ticket__details dt {
+    @apply text-secondary;
+  }
+  .participant-ticket__details dd {
+    @apply min-w-0 font-semibold;
+    overflow-wrap: anywhere;
+  }
+  .refund-form {
+    @apply flex w-full flex-col gap-4;
+  }
+  .text-area {
+    @apply min-h-28 w-full rounded-xl border border-border bg-surface p-4 text-sm;
+    resize: vertical;
+  }
+  .refund-success {
+    @apply flex w-full flex-col gap-2 rounded-2xl border border-[#29b95f] bg-[#29b95f]/16 p-6 text-sm leading-[1.4];
+  }
+  .refund-success strong {
+    @apply flex items-center gap-2 text-[#15803d];
+  }
+
+  .profile-form {
+    @apply w-full gap-6;
+  }
+  .profile-form .page-heading {
+    @apply gap-2;
+  }
+  .profile-form .text-field__label,
+  .participant-form .text-field__label {
+    @apply text-secondary;
+  }
+  .profile-form .text-field__control {
+    @apply min-h-12;
+  }
+  .profile-form .text-field__input {
+    @apply py-[14px];
+  }
+  .profile-form .field-grid {
+    @apply gap-x-4 gap-y-6;
+  }
+  .profile-form__save {
+    @apply flex w-full justify-end;
+  }
+  .password-change {
+    @apply flex w-full flex-col gap-4;
+  }
+
+  .manager-card {
+    @apply flex-row items-start gap-4;
+  }
+  .manager-card__avatar {
+    @apply flex size-12 shrink-0 items-center justify-center rounded-full bg-[#b2eeff] text-base font-bold text-brand;
+  }
+  .manager-card__info {
+    @apply flex min-w-0 flex-1 flex-col gap-1;
+  }
+  .manager-card__info h2 {
+    @apply text-base font-bold leading-[1.28];
+  }
+  .manager-card__info > p {
+    @apply text-[13px] leading-[1.16] text-secondary;
+  }
+  .manager-card__contacts {
+    @apply flex flex-col gap-2;
+  }
+  .manager-card__contacts a {
+    @apply flex min-w-0 items-center gap-[6px] text-[13px] leading-[1.16] text-[#269cff];
+    overflow-wrap: anywhere;
+  }
+  .manager-card__contacts img {
+    @apply shrink-0;
+  }
+  .faq {
+    @apply w-full gap-0;
+  }
+  .faq__item {
+    @apply w-full py-4;
+    background: url("/assets/cabinet/eab8e.svg") repeat-x left bottom;
+  }
+  .faq__question {
+    @apply flex list-none items-center justify-between gap-4 text-base font-medium leading-[1.28];
+    cursor: pointer;
+    transition: color 180ms ease;
+  }
+  .faq__question::-webkit-details-marker {
+    display: none;
+  }
+  .faq__question:hover {
+    @apply text-[#269cff];
+  }
+  .faq__icons {
+    @apply size-5 shrink-0;
+  }
+  .faq__minus {
+    @apply hidden;
+  }
+  .faq__item[open] .faq__minus {
+    @apply block;
+  }
+  .faq__item[open] .faq__plus {
+    @apply hidden;
+  }
+  .faq__answer {
+    @apply mt-4 text-[13px] leading-[1.4] text-secondary;
+  }
+
+  .checkout {
+    scroll-margin-top: 88px;
+  }
+  .checkout [hidden] {
+    display: none !important;
+  }
+  .checkout-steps {
+    @apply flex w-full items-center gap-5 overflow-x-auto pb-1;
+    scrollbar-width: thin;
+  }
+  .checkout-steps__item {
+    @apply flex shrink-0 items-center gap-3 text-sm font-bold leading-[1.16] text-secondary;
+  }
+  .checkout-steps__number {
+    @apply flex size-7 shrink-0 items-center justify-center rounded-full bg-border;
+  }
+  .checkout-steps__item--active {
+    @apply text-ink;
+  }
+  .checkout-steps__item--active .checkout-steps__number {
+    @apply bg-brand text-[#269cff];
+  }
+  .checkout-steps__item--complete .checkout-steps__number {
+    @apply bg-[#269cff] text-brand;
+  }
+  .checkout-panel {
+    @apply w-full gap-6;
+  }
+  .checkout-table {
+    @apply flex w-full min-w-0 flex-col;
+  }
+  .checkout-table__header {
+    @apply hidden grid-cols-[minmax(0,1fr)_120px_120px] gap-4 pb-3 text-sm font-bold leading-[1.16] text-secondary;
+    background: url("/assets/cabinet/c1229.svg") repeat-x left bottom;
+  }
+  .checkout-table__row {
+    @apply grid w-full min-w-0 grid-cols-2 items-center gap-3 py-4 text-sm leading-[1.28];
+    background: url("/assets/cabinet/c1229.svg") repeat-x left bottom;
+  }
+  .checkout-table__tariff {
+    @apply col-span-2 flex min-w-0 flex-col gap-1;
+  }
+  .checkout-table__tariff strong {
+    @apply text-base font-bold;
+  }
+  .checkout-table__tariff p {
+    @apply text-xs leading-[1.2] text-secondary;
+  }
+  .quantity-stepper {
+    @apply flex items-center justify-end gap-2;
+  }
+  .quantity-stepper__button {
+    @apply flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#f4f5f8] text-sm font-bold text-ink disabled:cursor-not-allowed disabled:text-tertiary;
+    transition: background-color 180ms ease;
+  }
+  .quantity-stepper__button:hover:not(:disabled) {
+    background: #e2e5ec;
+  }
+  .quantity-stepper__value {
+    @apply min-w-4 text-center text-sm font-bold;
+  }
+  .promo-input {
+    @apply flex w-full flex-col items-end gap-2;
+  }
+  .promo-input .text-field__label {
+    @apply sr-only;
+  }
+  .promo-input .text-field__control {
+    @apply min-h-12;
+  }
+  .promo-input .text-field__input {
+    @apply py-[14px];
+  }
+  .checkout__promo-success {
+    @apply text-sm text-[#15803d];
+  }
+  .checkout__error {
+    @apply text-sm text-[#ef4444];
+  }
+  .checkout__actions {
+    @apply flex w-full flex-wrap items-center justify-between gap-3;
+  }
+  .checkout__actions--end {
+    @apply justify-end;
+  }
+  .checkout__total {
+    @apply flex w-full flex-wrap items-center justify-between gap-4 pt-6;
+    background: url("/assets/cabinet/c1229.svg") repeat-x left top;
+  }
+  .checkout__total > span {
+    @apply text-base text-secondary;
+  }
+  .checkout__total > strong {
+    @apply text-lg font-bold;
+  }
+  .checkout__total .panel__description {
+    @apply mt-2;
+  }
+  .checkout__old-price {
+    @apply mr-3 font-normal text-[#9ca4c0];
+  }
+  .payment-options {
+    @apply grid w-full min-w-0 grid-cols-1 gap-4;
+  }
+  .payment-options legend {
+    @apply mb-3;
+  }
+  .payment-option {
+    @apply relative flex items-start gap-3 rounded-xl border border-border bg-white p-4;
+    cursor: pointer;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+  .payment-option--selected {
+    @apply border-[#269cff] bg-[#eff6ff];
+    box-shadow: 0 0 0 1px #269cff;
+  }
+  .payment-option__input {
+    @apply absolute left-4 top-4 size-[18px] opacity-0;
+  }
+  .payment-option__indicator {
+    @apply flex size-[18px] shrink-0 items-center justify-center;
+  }
+  .payment-option__indicator img {
+    @apply max-w-none shrink-0;
+  }
+  .payment-option:focus-within {
+    outline: 3px solid #5876e6;
+    outline-offset: 3px;
+  }
+  .payment-option strong {
+    @apply text-base font-bold leading-[1.28];
+  }
+  .payment-option__hint {
+    @apply mt-1 block text-xs leading-[1.2] text-secondary;
+  }
+  .participant-form {
+    @apply flex w-full min-w-0 flex-col gap-6 rounded-2xl border border-border bg-surface p-4;
+  }
+  .participant-form__header {
+    @apply flex w-full min-w-0 flex-wrap items-center gap-3;
+  }
+  .participant-form__header .select-field {
+    @apply order-3 min-w-0 flex-1 basis-full;
+  }
+  .participant-form__number {
+    @apply rounded-[20px] px-6 py-4 text-sm leading-[1.16] text-white;
+    background: linear-gradient(
+      101.445deg,
+      #120174 8.6538%,
+      #130247 41.346%,
+      #2c3ebb 71.635%,
+      #6addf2 100%
+    );
+  }
+  .participant-form__remove {
+    @apply flex size-7 shrink-0 items-center justify-center rounded-full border border-border bg-white;
+  }
+  .participant-form .text-field__control {
+    @apply min-h-12 bg-white;
+  }
+  .participant-form .text-field__input {
+    @apply py-[14px];
+  }
+  .checkout__buyer-banner {
+    @apply flex w-full min-w-0 flex-col gap-2 rounded-xl p-4 text-sm leading-[1.16] text-white;
+    background: linear-gradient(
+      101.445deg,
+      #120174 8.6538%,
+      #130247 41.346%,
+      #2c3ebb 71.635%,
+      #6addf2 100%
+    );
+    overflow-wrap: anywhere;
+  }
+  .checkout__buyer-banner span {
+    @apply text-[#9ca4c0];
+  }
+  .checkout__participants {
+    @apply flex w-full flex-col gap-3;
+  }
+  .checkout__participant-summary {
+    @apply w-full min-w-0 rounded-xl bg-surface p-4 text-sm leading-[1.16];
+    overflow-wrap: anywhere;
+  }
+  .checkout__participant-summary p {
+    @apply mt-2 text-xs leading-[1.2] text-secondary;
+  }
+  .checkout-success {
+    @apply w-full max-w-[640px] self-center items-center gap-8 text-center;
+  }
+  .checkout-success__icon {
+    @apply flex size-20 items-center justify-center rounded-full bg-[#29b95f];
+  }
+
+  @media (min-width: 48rem) {
+    .cabinet-section {
+      @apply gap-6;
+    }
+    .page-heading__description,
+    .page-heading__back,
+    .panel__description {
+      @apply text-sm;
+    }
+    .panel {
+      @apply gap-6 rounded-[20px] p-[23px];
+    }
+    .field-grid {
+      @apply grid-cols-2;
+    }
+    .tariff-card {
+      @apply rounded-[20px] p-[19px];
+    }
+    .tariff-card__points {
+      @apply grid-cols-2;
+    }
+    .tariff-card__description,
+    .tariff-card__points li {
+      @apply text-sm;
+    }
+    .tariff-card__action {
+      @apply items-end;
+    }
+    .orders-list {
+      @apply gap-0;
+    }
+    .order-row {
+      @apply flex-row items-center px-6 py-5;
+    }
+    .order-row__title {
+      @apply text-base;
+    }
+    .order-row__description {
+      @apply text-sm;
+    }
+    .order-row__meta {
+      @apply w-auto shrink-0 gap-4;
+    }
+    .order-row__meta strong {
+      @apply ml-0;
+    }
+    .ticket-row__details,
+    .participant-ticket__details {
+      @apply basis-auto;
+    }
+    .manager-card__contacts {
+      @apply flex-row flex-wrap gap-4;
+    }
+    .manager-card__contacts a,
+    .manager-card__info > p {
+      @apply text-sm;
+    }
+    .manager-card {
+      @apply flex-row gap-4 p-[23px];
+    }
+    .faq {
+      @apply gap-0 p-[31px];
+    }
+    .faq__answer {
+      @apply text-sm;
+    }
+    .checkout-steps {
+      @apply gap-8;
+    }
+    .checkout-table__header {
+      @apply grid;
+    }
+    .checkout-table__row {
+      @apply grid-cols-[minmax(0,1fr)_120px_120px] gap-4 py-3 text-base;
+    }
+    .checkout-table__tariff {
+      @apply col-span-1;
+    }
+    .checkout-table--summary .checkout-table__header,
+    .checkout-table--summary .checkout-table__row {
+      @apply grid-cols-[minmax(0,1fr)_140px_80px_140px];
+    }
+    .checkout-table--summary .checkout-table__row {
+      @apply py-6;
+    }
+    .promo-input {
+      @apply flex-row;
+    }
+    .promo-input .text-field {
+      @apply flex-1;
+    }
+    .participant-form {
+      @apply p-6;
+    }
+    .participant-form__header {
+      @apply flex-nowrap gap-4;
+    }
+    .participant-form__header .select-field {
+      @apply order-none basis-auto;
+    }
+    .checkout-success {
+      @apply p-12;
+    }
+  }
+  @media (min-width: 75rem) {
+    .cabinet-section {
+      @apply gap-8;
+    }
+    .page-heading__title,
+    .panel__title {
+      @apply text-2xl;
+    }
+    .panel {
+      @apply rounded-3xl p-[31px];
+    }
+    .tariff-card {
+      @apply flex-row items-center rounded-3xl p-[23px];
+    }
+    .tariff-card__title {
+      @apply text-2xl;
+    }
+    .tariff-card__points {
+      grid-template-columns: repeat(2, minmax(0, 380px));
+    }
+    .tariff-card__action {
+      @apply w-auto;
+    }
+    .tariff-card__next-price {
+      @apply text-sm;
+    }
+    .order-row {
+      @apply px-6;
+    }
+    .my-event {
+      @apply items-start;
+    }
+    .my-event__details .event-card__title {
+      @apply text-2xl;
+    }
+    .my-event--past {
+      @apply items-center;
+    }
+    .order-detail__grid {
+      @apply grid-cols-[minmax(0,688fr)_minmax(0,480fr)] gap-8;
+    }
+    .order-summary__heading {
+      @apply flex-row;
+    }
+    .order-summary__heading .panel__title {
+      @apply w-auto flex-1;
+    }
+    .manager-card {
+      @apply rounded-[20px] p-[23px];
+    }
+    .faq {
+      @apply rounded-[20px] p-[39px];
+    }
+    .field-grid--three {
+      @apply grid-cols-3;
+    }
+    .payment-options {
+      @apply grid-cols-2;
+    }
+    .checkout-success {
+      @apply p-12;
+    }
+  }
+}

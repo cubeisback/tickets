@@ -1,0 +1,30 @@
+{
+  "name": "adpass-event-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "verify": "node scripts/verify.mjs",
+    "verify:admin": "node scripts/verify-admin.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "build:pages": "node scripts/build-pages.mjs",
+    "preview:pages": "node scripts/preview-pages.mjs",
+    "verify:pages": "node scripts/verify-pages.mjs"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "playwright": "^1.65.1",
+    "prettier": "^3.10.1",
+    "tailwindcss": "^4.1.0"
+  }
+}

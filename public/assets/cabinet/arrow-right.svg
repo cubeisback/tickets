@@ -1,0 +1,20 @@
+<svg
+  preserveAspectRatio="none"
+  overflow="visible"
+  style="display: block"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="Icon_Button">
+    <path
+      id="Vector"
+      d="M10.5893 15.8933L16.4819 10.0007L10.5893 4.10815L9.41079 5.28666L13.2915 9.16737L4.69674 9.16737L4.69674 10.834L13.2915 10.834L9.41079 14.7148L10.5893 15.8933Z"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      fill="white"
+    />
+  </g>
+</svg>

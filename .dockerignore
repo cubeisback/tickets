@@ -1,0 +1,10 @@
+node_modules
+.next
+.verification
+.git
+.env*
+*.tsbuildinfo
+out
+README.md
+scripts
+.prepare-source.mjs

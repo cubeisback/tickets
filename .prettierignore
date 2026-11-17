@@ -1,0 +1,6 @@
+node_modules/
+.next/
+out/
+.verification/
+package-lock.json
+public/fonts/
